@@ -2,15 +2,17 @@ package dem.bar.app.bottomappbardem;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.bottomappbar.BottomAppBar;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.android.material.bottomappbar.BottomAppBar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
         fab = findViewById(R.id.fab);
         btn = findViewById(R.id.btn);
 
+        setSupportActionBar(bottomAppBar);
+
+        bottomAppBar.setNavigationIcon(R.drawable.ic_menu);
         btn.setOnClickListener(
 
                 new View.OnClickListener() {
